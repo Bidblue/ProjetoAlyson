@@ -1,0 +1,73 @@
+//Primeira versão 
+4 import java.util.Scanner; 
+5 
+ 
+6 public class DivisaoDeNumeros { 
+7 
+ 
+8 	public static void main(String[] args) { 
+9 		//Criamos um objeto Scanner para capturar o que foi digitado 
+10 		Scanner input = new Scanner(System.in); 
+11 		//Imprime mensagem para a inserção do primeiro valor 
+12 		System.out.println("Insira o valor do dividendo: "); 
+13 		//Guarda o valor digitado pelo usuário na variável dividendo 
+14 		int dividendo = input.nextInt(); 
+15 		//Imprime mensagem para a inserção do segundo valor 
+16 		System.out.println("Insira o valor do divisor: "); 
+17 		//Guarda o valor digitado pelo usuário na variável divisor 
+18 		int divisor = input.nextInt(); 
+19 		 
+20 		//Verifica se o valor do divisor é igual a zero 
+21 		if (divisor == 0) { 
+22 			//Imprime o valor -1 caso o divisor seja zero 
+23 			System.out.println("-1"); 
+24 		} 
+25 		//Verifica se o valor do cálculo da divisão é negativo 
+26 		else if ((dividendo / divisor < 0)) { 
+27 			//Imprime o valor 0 caso o resultdo da divisão seja negativo 
+28 			System.out.println("Valor encontrado: 0"); 
+29 		} 
+30 		else { 
+31 			//Como o divisor não é zero e o cálculo não é negativo, imprime o resultado da divisão 
+32 			System.out.println("Valor calculado: " + dividendo / divisor); 
+33 		} 
+34 	} 
+35 } 
+36 
+ 
+37 //Segunda versão, com erro de lógica 
+38 import java.util.Scanner; 
+39 
+ 
+40 public class DivisaoDeNumeros { 
+41 
+ 
+42 	public static void main(String[] args) { 
+43 		//Criamos um objeto Scanner para capturar o que foi digitado 
+44 		Scanner input = new Scanner(System.in); 
+45 		//Imprime mensagem para a inserção do primeiro valor 
+46 		System.out.println("Insira o valor do dividendo: "); 
+47 		//Guarda o valor digitado pelo usuário na variável dividendo 
+48 		int dividendo = input.nextInt(); 
+49 		//Imprime mensagem para a inserção do segundo valor 
+50 		System.out.println("Insira o valor do divisor: "); 
+51 		//Guarda o valor digitado pelo usuário na variável divisor 
+52 		int divisor = input.nextInt(); 
+53 		 
+54 		//Verifica se o valor do cálculo da divisão é negativo 
+55 		if ((dividendo / divisor < 0)) { 
+56 			//Imprime o valor 0 caso o resultdo da divisão seja negativo 
+57 			System.out.println("Valor encontrado: 0"); 
+58 		} 
+59 		//Verifica se o cálculo é positivo 
+60 		else if (dividendo / divisor > 0) { 
+61 			//Imprime o resultado do cálculo caso o resultado seja positivo 
+62 			System.out.println("Valor calculado: " + dividendo / divisor); 
+63 		} 
+64 		//Como o resultado não é positivo e nem negativo, podemos supor que o divisor é zero 
+65 		else { 
+66 			//Imprime o valor -1 pois o divisor é zero 
+67 			System.out.println("-1"); 
+68 		} 
+69 	} 
+70 } 
